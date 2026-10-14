@@ -354,5 +354,19 @@ bind_rows(ponderado    = tidy(b2),
 # weights no consideran el diseño muestral de la ENE; por lo que el análisis 
 # realizado presenta limitaciones claras.
 
+# =============================================================================
+# Parte C: Comunicar
+# =============================================================================
+
+# Tabla comparativa con modelsummary() para los modelos de la Parte B
+modelsummary(list("Base" = b1, "Con controles" = b2, "Interacción" = b3_int),
+             stars   = TRUE,
+             gof_map = c("nobs", "r.squared"))
+
+# Exportación de los dos archivos CSV 
+modelsummary(modelos_ene, output = "data/processed/t3_tabla_ene.csv")
+tidy(m2, conf.int = TRUE) |>
+  write.csv("data/processed/t3_coeficientes_casen.csv", row.names = FALSE)
+
 
 
