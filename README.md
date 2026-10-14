@@ -41,7 +41,7 @@ en la carpeta `data/raw/`:
 
 ## Cómo correrlo
 
-1. Abrir el archivo `.Rproj` del repositorio (ej. `Repositorio_Sem8.Rproj`).
+1. Abrir el archivo `Repositorio_Sem8.Rproj`.
 2. Abrir el script `scripts/tarea_t3.R`.
 3. Ejecutar el script completo desde el inicio (requiere los paquetes `dplyr`, `broom` y `modelsummary`).
 
